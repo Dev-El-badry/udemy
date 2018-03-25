@@ -1,0 +1,59 @@
+{
+  "name": "Member",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "username": {
+      "type": "string",
+      "required": false
+    },
+    "picture": {
+      "type": "string"
+    },
+    "signature": {
+      "type": "string"
+    },
+    "country": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "users": {
+      "type": "hasOne",
+      "model": "User",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {
+    "sayMyName": {
+      "accepts": [
+        {
+          "arg": "firstName",
+          "type": "string",
+          "required": true,
+          "description": "chunk the name of the description"
+        }
+      ],
+      "returns": [
+        {
+          "arg": "firstName",
+          "type": "object",
+          "root": false,
+          "description": "this is the response to the say my name thing"
+        }
+      ],
+      "description": "this is one takes name and say it",
+      "http": [
+        {
+          "path": "/say-my-name/:myName",
+          "verb": "get"
+        }
+      ]
+    }
+  }
+}

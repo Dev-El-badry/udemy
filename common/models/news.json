@@ -1,0 +1,25 @@
+{
+  "name": "News",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "date": {
+      "type": "string",
+      "default": "now"
+    },
+    "headline": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

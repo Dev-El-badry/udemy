@@ -1,0 +1,25 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "mongodb://localhost:27017/mydemy",
+    "database": "mydemy",
+    "password": "",
+    "name": "db",
+    "user": "",
+    "connector": "mongodb"
+  },
+  "local-storage": {
+    "name": "local-storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/local-storage"
+  },
+  "amazonS3": {
+    "name": "amazonS3",
+    "connector": "loopback-component-storage",
+    "provider": "amazon",
+    "key": "Qnn5CI0nq/vebTuAWrQCd5deSI8oubuS79MmXY6i",
+    "keyId": "AKIAIDFJUO6AJ7UKFZSQ"
+  }
+}

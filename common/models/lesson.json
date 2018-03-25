@@ -1,0 +1,38 @@
+{
+  "name": "Lesson",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "shortDesc": {
+      "type": "string"
+    },
+    "videoURL": {
+      "type": "string"
+    },
+    "resource": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "section": {
+      "type": "belongsTo",
+      "model": "Section",
+      "foreignKey": ""
+    },
+    "comments": {
+      "type": "hasMany",
+      "model": "Comment",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
